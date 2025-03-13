@@ -10,17 +10,16 @@
     <section class="bg-white-100">
            <header class="py-6 bg-white shadow-white">
               <nav class="fixed top-0 left-0 w-full bg-white shadow-md text-black z-50">
-                <div class="container mx-auto flex justify-between item-center py-4">
+                <div class="container mx-auto flex justify-between items-center py-4">
                     <a href="#" class="text-3xl font-bold">Foodies</a>
-                      <ul class="flex space-x-10 item-center">
-                        <li><a href="#" class="hover:text-blue-500"></a>Home</li>
-                        <li><a href="#" class="hover:text-blue-500"></a>Recipe</li>
-                        <li><a href="#" class="hover:text-blue-500"></a>About</li>
-                        <li><a href="#" class="hover:text-blue-500"></a>Team</li>
-                        <li><a href="#" class="hover:text-blue-500"></a>Contact</li>
+                      <ul class="flex space-x-10 items-center">
+                        <li><a href="#" class="hover:text-orange-500">Home</a></li>
+                        <li><a href="#recipes" class="hover:text-orange-500">Recipe</a></li>
+                        <li><a href="#about" class="hover:text-orange-500">About</a></li>
+                        <li><a href="#team" class="hover:text-orange-500">Team</a></li>
                         <li>
                         <a href="./signup.html">
-                            <button class="bg-orange-500 hover:bg-orange-600 text-black font-bold py-1 px-7 rounded-full">Sing up</button>
+                            <button class="bg-orange-500 hover:bg-orange-600 text-black font-bold py-1 px-7 rounded-full" id="submit">Sign up</button>
                         </a>
                       </ul>
                 </div>
@@ -37,7 +36,7 @@
                     <h1 class="text-4xl md:text-6xl font-bold mb-4">you can get traditional and modern foods through us</h1>
                     <p class="text-3xl mb-6">Experience the taste and goodness of traditional and modern food delivered directly to you.</p>
                     <button class="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded text-lg flex items-center mx-auto">
-                       please order immideitly
+                       please order immediately
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -47,47 +46,144 @@
         </div>
     </main>
     </section>
-
+    
     <section id="recipes" class="py-12 bg-green-50 text-center">
-        <h2 class="text-3xl font-bold text-gray-800">Our Latest Recipes</h2>
-        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="asset/image/Food Dish 4.jpg" alt="Recipe 1" class="w-full h-48 object-cover rounded-t-lg">
-                <h3 class="mt-4 text-xl font-semibold">Recipe 1: Chicken Biryani</h3>
-                <p class="mt-2 text-gray-600">Fluffy chicken piryani perfect for breakfast. Serve with syrup and fresh fruits.</p>
+        <h2 class="text-3xl font-bold text-gray-800 mb-8">Our Latest Recipes</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+            <div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
+                 data-recipe-name="Chicken Biryani"
+                 data-recipe-description="Fluffy chicken biryani perfect for breakfast. Serve with syrup and fresh fruits."
+                 data-recipe-image="asset/image/Food Dish 4.jpg">
+                <img src="asset/image/Food Dish 4.jpg" alt="Chicken Biryani" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Chicken Biryani</h3>
+                    <h4 class="text-xl font-semibold mb-0">RS.1000</h4>
+                    <p class="text-gray-600 text-sm">Fluffy chicken biryani perfect for breakfast. Serve with syrup and fresh fruits.</p>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="asset/image/Food Dish 2.jpeg" alt="Recipe 2" class="w-full h-48 object-cover rounded-t-lg">
-                <h3 class="mt-4 text-xl font-semibold">Recipe 2: Lobster</h3>
-                <p class="mt-2 text-gray-600">Lobster is a low-calorie food that is high in vitamins and minerals. It contains copper, selenium, zinc, and vitamin B12.</p>
+    
+            <div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
+                 data-recipe-name="Lobster"
+                 data-recipe-description="Lobster is a low-calorie food that is high in vitamins and minerals. It contains copper, selenium, zinc, and vitamin B12."
+                 data-recipe-image="asset/image/Food Dish 2.jpeg">
+                <img src="asset/image/Food Dish 2.jpeg" alt="Lobster" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Lobster</h3>
+                    <h4 class="text-xl font-semibold mb-0">RS.1000</h4>
+                    <p class="text-gray-600 text-sm">Lobster is a low-calorie food that is high in vitamins and minerals. It contains copper, selenium, zinc, and vitamin B12.</p>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="asset/image/Food Dish 3.jpeg" alt="Recipe 3" class="w-full h-48 object-cover rounded-t-lg">
-                <h3 class="mt-4 text-xl font-semibold">Recipe 3:  grilled tuna steak with avocado salsa.</h3>
-                <p class="mt-2 text-gray-600">Tuna steaks, especially ahi tuna, are rich in protein and omega-3 fatty acids.
-                    Grilling gives them a delicious seared exterior while keeping the inside tender.</p>
+    
+            <div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
+                 data-recipe-name="Grilled Tuna Steak with Avocado Salsa"
+                 data-recipe-description="Tuna steaks, especially ahi tuna, are rich in protein and omega-3 fatty acids. Grilling gives them a delicious seared exterior while keeping the inside tender."
+                 data-recipe-image="asset/image/Food Dish 3.jpeg">
+                <img src="asset/image/Food Dish 3.jpeg" alt="Grilled Tuna Steak" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Grilled Tuna Steak with Avocado Salsa</h3>
+                    <h4 class="text-xl font-semibold mb-0">RS.1000</h4>
+                    <p class="text-gray-600 text-sm">Tuna steaks, especially ahi tuna, are rich in protein and omega-3 fatty acids. Grilling gives them a delicious seared exterior while keeping the inside tender.</p>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="asset/image/Food Dish 6.jpg" alt="Recipe 1" class="w-full h-48 object-cover rounded-t-lg">
-                <h3 class="mt-4 text-xl font-semibold">Recipe 1: Idli</h3>
-                <p class="mt-2 text-gray-600">a soft, spongy, nutritious South Indian food made from fermented rice and lentils.</p>
+            <div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
+                 data-recipe-name="Idli"
+                 data-recipe-description="a soft, spongy, nutritious South Indian food made from fermented rice and lentils."
+                 data-recipe-image="asset/image/Food Dish 6.jpg">
+                <img src="asset/image/Food Dish 6.jpg" alt="Idli" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Idli</h3>
+                    <h4 class="text-xl font-semibold mb-0">RS. 400(4pcs)</h4>
+                    <p class="text-gray-600 text-sm">a soft, spongy, nutritious South Indian food made from fermented rice and lentils.</p>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadowlg">
-                <img src="asset/image/Food Dish 7.jpg" alt="Recipe 2" class="w-full h-48 object-cover rounded-t-lg">
-                <h3 class="mt-4 text-xl font-semibold">Recipe 2: Dosa</h3>
-                <p class="mt-2 text-gray-600">a crispy, crepe-like Indian dish originating from South India, made from a fermented batter of rice and lentils, known for its thin, crispy texture and often served with potato masala, coconut chutney, or sambar</p>
+            <div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
+                 data-recipe-name="Dosa"
+                 data-recipe-description="a crispy, crepe-like Indian dish originating from South India, made from a fermented batter of rice and lentils, known for its thin, crispy texture and often served with potato masala, coconut chutney, or sambar"
+                 data-recipe-image="asset/image/Food Dish 7.jpg">
+                <img src="asset/image/Food Dish 7.jpg" alt="Dosa" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Dosa</h3>
+                    <h4 class="text-xl font-semibold mb-0">RS. 400(4pcs)</h4>
+                    <p class="text-gray-600 text-sm">a crispy, crepe-like Indian dish originating from South India, made from a fermented batter of rice and lentils, known for its thin, crispy texture and often served with potato masala, coconut chutney, or sambar</p>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="asset/image/Food Dish 8.jpg" alt="Recipe 3" class="w-full h-48 object-cover rounded-t-lg">
-                <h3 class="mt-4 text-xl font-semibold">Recipe 3: Idiyappam</h3>
-                <p class="mt-2 text-gray-600">It's made primarily from rice flour, water, and salt.</p>
+            <div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
+                 data-recipe-name="Idiyappam"
+                 data-recipe-description="It's made primarily from rice flour, water, and salt."
+                 data-recipe-image="asset/image/Food Dish 8.jpg">
+                <img src="asset/image/Food Dish 8.jpg" alt="Idiyappam" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Idiyappam</h3>
+                    <h4 class="text-xl font-semibold mb-0">RS. 280(7pcs)</h4>
+                    <p class="text-gray-600 text-sm">It's made primarily from rice flour, water, and salt.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="about" class="py-12 px-6 text-center bg-gray-200">
-        <h2 class="text-3xl font-bold text-gray-800">About Us</h2>
-        <p class="mt-4 text-lg text-gray-600">We are passionate about cooking, and our goal is to make cooking your favorite foods easy, healthy, and enjoyable for everyone.</p>
+        <h2 class="text-5xl font-bold text-gray-800">About Us</h2>
+        <p class="mt-4 text-4xl text-gray-600">We are passionate about cooking the food you ask for. And we aim to make your favorite dishes easy, healthy, and delicious. Our goal is to make cooking fun for everyone.</p>
     </section>
+
+    <section id="team" class="py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-8">We will meet the team that will feed you</h2>
+            <div class="flex flex-wrap justify-center -mx-4">
+                <div class="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
+                    <img src="asset/image/team 1.jpg" alt="Velvet Dewe" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Velvet Dewe</h3>
+                    <p class="text-gray-600">Executive Chef</p>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
+                    <img src="asset/image/team 2.jpg" alt="Crimson Vale" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Crimson Vale</h3>
+                    <p class="text-gray-600">Sous Chef</p>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
+                    <img src="asset/image/team 3.jpeg" alt="Nova Drift" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Nova Drift</h3>
+                    <p class="text-gray-600">Junior Chef</p>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
+                    <img src="asset/image/team 4.jpeg" alt="Blaze Storm" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Blaze Storm</h3>
+                    <p class="text-gray-600">Junior Chef</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <footer class="bg-gray-800 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="mb-6 md:mb-0">
+                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-sm text-gray-300 hover:text-white">Home</a></li>
+                            <li><a href="#recipes" class="text-sm text-gray-300 hover:text-white">Recipes</a></li>
+                            <li><a href="#about" class="text-sm text-gray-300 hover:text-white">About</a></li>
+                            <li><a href="#team" class="text-sm text-gray-300 hover:text-white">Team</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                        <p class="text-sm text-gray-300 mb-2">123 Main Street, City, State, Country</p>
+                        <p class="text-sm text-gray-300 mb-2">Email: Foodies@gmail.com</p>
+                        <p class="text-sm text-gray-300">Phone: +1 (123) 456-7890</p>
+                    </div>
+                    <div class="w-full md:w-full">
+                        <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                        <div class="flex mb-3 text-black    ">
+                            <input type="email" class="w-full border rounded-l-md py-2 px-3 focus:outline-none focus:ring focus:border-yellow-300" placeholder="Enter your email">
+                            <button class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-4 rounded-r-md font-semibold focus:outline-none focus:ring focus:border-yellow-300" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-300">
+                    <p>&copy; 2024 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>
